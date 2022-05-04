@@ -9,14 +9,9 @@ import {
 } from "react-native";
 import { WebView } from "react-native-webview";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import * as Device from "expo-device";
 
 export default function App() {
-  const [userDevice, setUserDevice] = useState("");
-
   useEffect(() => {
-    setUserDevice(Device.modelName);
-
     const backAction = () => {
       Alert.alert("", "앱을 종료하시겠습니까?", [
         {
