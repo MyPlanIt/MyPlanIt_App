@@ -2,11 +2,10 @@
   "expo": {
     "name": "마이플랜잇",
     "slug": "MyPlanItApp",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/icon.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,18 +16,21 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.myplanit.myplanitapp",
-      "buildNumber": "1.0.2"
+      "buildNumber": "1.0.3",
+      "icon": "./assets/iosicon.png"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
+        "foregroundImage": "./assets/androidicon.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.myplanit.myplanitapp",
-      "versionCode": 3
+      "versionCode": 4,
+      "icon": "./assets/androidicon.png",
+      "permissions": []
     },
     "web": {
-      "favicon": "./assets/icon.png"
+      "favicon": "./assets/favicon.png"
     }
   }
 }
