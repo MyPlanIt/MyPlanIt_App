@@ -40,7 +40,7 @@ export default function App() {
     <View style={{ flex: 1, marginTop: 30 }}>
       <WebView
         userAgent={`Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Mobile Safari/537.36`}
-        source={{ uri: "https://myplanit.site/todo" }}
+        source={{ uri: "https://myplanit.site" }}
         ref={webview}
       />
       <StatusBar
