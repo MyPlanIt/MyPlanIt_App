@@ -11,15 +11,14 @@ import { WebView } from "react-native-webview";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function App() {
+  const goback = `
+      window.history.go(-1); 
+      return false;
+    `;
+
   useEffect(() => {
     const backAction = () => {
-      Alert.alert("", "앱을 종료하시겠습니까?", [
-        {
-          text: "취소",
-          onPress: () => null,
-        },
-        { text: "확인", onPress: () => BackHandler.exitApp() },
-      ]);
+      this.webref.injectJavaScript(goback);
       return true;
     };
 
@@ -44,6 +43,7 @@ export default function App() {
       <WebView
         userAgent={`Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Mobile Safari/537.36`}
         source={{ uri: "https://myplanit.site" }}
+        ref={(r) => (this.webref = r)}
       />
       <StatusBar
         translucent
