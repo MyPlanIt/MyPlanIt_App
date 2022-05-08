@@ -15,7 +15,6 @@ export default function App() {
 
   useEffect(() => {
     const backAction = () => {
-      console.log(webview.current.goBack());
       webview.current.goBack();
       return true;
     };
