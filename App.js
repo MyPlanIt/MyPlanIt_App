@@ -18,15 +18,16 @@ export default function App() {
       webview.current.goBack();
       return true;
     } else {
-      Alert.alert("", "앱을 종료하시겠습니까?", [
-        {
-          text: "취소",
-          onPress: () => null,
-        },
-        { text: "확인", onPress: () => BackHandler.exitApp() },
-      ]);
-      return true;
-    }
+    //   Alert.alert("", "앱을 종료하시겠습니까?", [
+    //     {
+    //       text: "취소",
+    //       onPress: () => null,
+    //     },
+    //     { text: "확인", onPress: () => BackHandler.exitApp() },
+    //   ]);
+    //   return true;
+    // }
+      return false;
   };
 
   useEffect(() => {
